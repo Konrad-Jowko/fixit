@@ -1,0 +1,241 @@
+@import "./../settings.scss";
+@import "./../animatedElementsMixins.scss";
+
+/* Styles for Services subpage */
+.services {
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+
+    h1 {
+      font-size: clamp(1rem, calc(2.5rem + 1vw), 8rem);
+      color: $services-header-color;
+      letter-spacing: 1px;
+    }
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    // Single service styles
+    .services--option {
+      border: 2px solid $services-option-border-color;
+      border-radius: 1em;
+      position: relative;
+      overflow: hidden;
+      width: calc(max(300px, 20vw));
+      height: 400px;
+      text-align: center;
+      padding: clamp(0.5rem, calc(0.5rem + 1vw), 3rem);
+      margin: clamp(0.5rem, calc(0.5rem + 1vw), 3rem);
+
+      .services-description {
+        display: flex;
+        flex-flow: column nowrap;
+        transition: all 1s;
+
+        h2 {
+          position: relative;
+          font-size: clamp(2em, calc(1.5em + 1vw), 3em);
+          margin-top: 12rem;
+          color: $services-option-header-color;
+          letter-spacing: 1px;
+          padding: .25em;
+          transition: all 2.5s;
+
+          &::after {
+            z-index: -1;
+            position: absolute;
+            border-radius: .7em;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: $services-option-header-background-color;
+            content: '';
+            display: inline-block;
+            height: 100%;
+            width: 150%;
+          }
+        }
+
+        // Single service expandable details styles
+        ul {
+          position: relative;
+          top: -40%;
+          list-style-type: none;
+          text-align: left;
+          display: flex;
+          flex-flow: column nowrap;
+          width: 100%;
+          padding: 0;
+
+          li {
+            position: relative;
+            padding: .6em;
+            margin: .3em;
+            background: $single-service-detail-background-color;
+            width: 90%;
+            border-radius: 1em;
+            color: $single-service-detail-font-color;
+            transform: translateX(-120%);
+            transform-origin: left;
+
+            &::before {
+              position: absolute;
+              content: '';
+              background: $single-service-detail-background-color;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              bottom: 0;
+              left: -95%;
+              overflow: hidden;
+              z-index: -1;
+            }
+          }
+
+          // Single detail slide-out delay
+          @for $i from 1 through 4 {
+            li:nth-child(#{$i}) {
+              transition: all 1s ease-in;
+              transition-delay: calc(.5s - #{$i}50ms);;
+            }
+          }
+        }
+
+        // Button for expanding details
+        .button {
+          position: absolute;
+          top: 25%;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          transform: translateX(-50%);
+          padding: 1rem 1.5rem;
+          background: $expanding-button-background-color;
+          color: $services-button-font-color;
+          font-size: 1.7rem;
+          text-align: center;
+          border-radius: 1rem;
+          transition: transform 2s, opacity 1.5s, font-size 1s;
+
+          &:hover {
+            font-size: 2.1rem;
+
+          }
+        }
+
+        .contact-button {
+          margin-top: -7px;
+          color: $services-button-font-color;
+          padding: .5rem 1rem;
+          font-size: 1.5rem;
+          background: $contact-button-background-color;
+          border-radius: 1rem;
+          align-self: center;
+          transition: font-size 1s, opacity 1s;
+          opacity: 0;
+
+          &:hover {
+            cursor: pointer;
+            font-size: 1.7rem;
+
+          }
+        }
+      }
+
+      .service-reveal:checked ~ .services-description {
+        h2 {
+          margin: 0;
+        }
+
+        // Single detail slide-in delay
+        ul {
+          @for $i from 1 through 4 {
+            li:nth-child(#{$i}) {
+              transform: translateX(0);
+              transition: all 1.5s ease-in;
+              transition-delay: calc(.5s - #{$i}50ms);
+            }
+          }
+        }
+
+        .button {
+          opacity: 0;
+          transform: translate(-50%, -200%);
+        }
+
+        .contact-button {
+          opacity: 1;
+          transition: all 1s;
+        }
+      }
+    }
+
+    @for $i from 1 through 8 {
+      .bg--#{$i} {
+        z-index: 100000;
+        background-size: 200%;
+        overflow: hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-blend-mode: lighten;
+
+        &:hover {
+          background-size: 250%;
+          transition: all 2s;
+        }
+      }
+    }
+
+    .bg--1 {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+                        url('https://images.pexels.com/photos/4752984/pexels-photo-4752984.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    }
+
+    .bg--2 {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+                        url('https://images.pexels.com/photos/3306057/pexels-photo-3306057.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    }
+
+    .bg--3 {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+                        url('https://images.pexels.com/photos/1409999/pexels-photo-1409999.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260');
+    }
+
+    .bg--4 {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+                        url('https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    }
+
+    .bg--5 {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+                        url('https://images.pexels.com/photos/5691590/pexels-photo-5691590.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    }
+
+    .bg--6 {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+                        url('https://images.pexels.com/photos/719399/pexels-photo-719399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    }
+
+    .bg--7 {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+                        url('https://images.pexels.com/photos/5711900/pexels-photo-5711900.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    }
+
+    .bg--8 {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
+                        url('https://images.pexels.com/photos/963436/pexels-photo-963436.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260');
+    }
+  }
+}

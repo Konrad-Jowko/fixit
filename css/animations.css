@@ -1,0 +1,42 @@
+/* Color Variables */
+/* Fonts */
+html .button {
+  font-size: clamp(0.01rem, calc(0.7rem + 1vw), 4rem);
+  padding: 0.3em;
+  margin: 0.3em;
+  text-align: center;
+  min-width: 6em;
+  border: 2px solid #f7f1e3;
+  border-radius: 0.5em;
+  background: linear-gradient(45deg, #f7f1e3 50%, transparent 50%);
+  background-size: 300%;
+  background-position: 100% 0;
+  transition: all 1.5s;
+}
+
+html .button:hover {
+  color: #ff5252;
+  background-position: 0 100%;
+  background-size: 600%;
+}
+
+html .button--alternate {
+  font-size: clamp(0.01rem, calc(0.7rem + 1vw), 4rem);
+  padding: 0.3em;
+  margin: 0.3em;
+  text-align: center;
+  min-width: 6em;
+  border: 2px solid #ff5252;
+  border-radius: 0.5em;
+  background: linear-gradient(45deg, #ff5252 50%, transparent 50%);
+  background-size: 300%;
+  background-position: 100% 0;
+  transition: all 1.5s;
+}
+
+html .button--alternate:hover {
+  color: #f7f1e3;
+  background-position: 0 100%;
+  background-size: 600%;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc2V0dGluZ3Muc2NzcyIsIi4uL3Nhc3MvYW5pbWF0aW9ucy5zY3NzIiwiYW5pbWF0aW9ucy5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUEsb0JBQUE7QUFRQSxVQUFBO0FDY0E7RUFuQkUsbURBQWtEO0VBQ2xELGNBQWM7RUFDZCxhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLGNBQWM7RUFDZCx5QkFBOEI7RUFDOUIsb0JBQW9CO0VBQ3BCLGdFQUFxRTtFQUNyRSxxQkFBcUI7RUFDckIsMkJBQTJCO0VBQzNCLG9CQUFvQjtBQ0N0Qjs7QURDRTtFQUNFLGNBQU87RUFDUCwyQkFBMkI7RUFDM0IscUJBQXFCO0FDRXpCOztBREVBO0VBbkJFLG1EQUFrRDtFQUNsRCxjQUFjO0VBQ2QsYUFBYTtFQUNiLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QseUJBQThCO0VBQzlCLG9CQUFvQjtFQUNwQixnRUFBcUU7RUFDckUscUJBQXFCO0VBQ3JCLDJCQUEyQjtFQUMzQixvQkFBb0I7QUNxQnRCOztBRG5CRTtFQUNFLGNBQU87RUFDUCwyQkFBMkI7RUFDM0IscUJBQXFCO0FDc0J6QiIsImZpbGUiOiJhbmltYXRpb25zLmNzcyJ9 */

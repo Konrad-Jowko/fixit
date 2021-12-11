@@ -1,0 +1,51 @@
+@import "./normalize.scss";
+@import "./settings.scss";
+
+/* Global styles for index.html file */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: $color-fair;
+
+  label:hover {
+    cursor: pointer;
+  }
+
+  .text-attention {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  // Subpage change slide styles
+  .body-container {
+    z-index: 1;
+
+    input[id="home"]:checked ~ .home {
+      transform: translate(0, 0);
+    }
+
+    input[id="services"]:checked ~ .services {
+      transform: translate(0, 0);
+    }
+
+    input[id="contact"]:checked ~ .contact {
+      transform: translate(0, 0);
+    }
+
+    .home,
+    .services,
+    .contact {
+      transform: translate(0, -300%);
+      z-index: -1;
+      position: absolute;
+      transition: all 2s ease-in;
+      transform: translate(0, -300%);
+      margin: auto;
+      overflow: hidden;
+      display: flex;
+    }
+  }
+}

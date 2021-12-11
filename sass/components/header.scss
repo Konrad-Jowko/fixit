@@ -1,0 +1,53 @@
+@import "./../settings.scss";
+@import "./../animatedElementsMixins.scss";
+
+/* Styles for Header element */
+header {
+  z-index: 2;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 6rem;
+  background: linear-gradient(135deg, $header-background-secondary 30%, $header-background-primary 20%);
+  font-family: $header-font;
+  color: $header-font-color;
+
+  .logo {
+    font-family: $logo-font;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    font-size: clamp(5rem, calc(2rem + 1vw), 8rem);
+    padding-inline: clamp(.01rem, calc(1rem + 1vw), 4rem);
+  }
+
+  .header-quote {
+    text-align: center;
+    font-size: clamp(2rem, calc(1.5rem + 1vw), 3rem);
+    margin-inline: 40px;
+  }
+
+  nav {
+    margin: 0 auto;
+
+     ul {
+      list-style-type: none;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      padding: 0.5em;
+
+      li {
+        flex: 1;
+        display: flex;
+
+        .button {
+          width: 100%;
+          @include button($header-button-background-color-primary, $header-button-background-color-secondary);
+        }
+      }
+    }
+  }
+}

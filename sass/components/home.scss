@@ -1,0 +1,111 @@
+@import "./../settings.scss";
+@import "./../animatedElementsMixins.scss";
+
+/* Styles for Homepage */
+.home {
+  .container {
+    margin: 0;
+    width: 100%;
+
+    div {
+      position: relative;
+      margin-block: 0.5rem;
+      padding: clamp(0.3rem, calc(0.1em + 2vw), 5rem) 0.5rem;
+      flex: 1;
+      text-align: center;
+      color: $homepage-primary-font-color;
+      font-size: clamp(0.5rem, calc(0.8rem + 1vw), 4rem);
+
+      h1 {
+        font-size: clamp(1rem, calc(2.5rem + 1vw), 8rem);
+        color: $homepage-header-font-color;
+        letter-spacing: 1px;
+      }
+
+      h2 {
+        font-size: clamp(1rem, calc(1.5rem + 1vw), 4rem);
+        color: $homepage-header-font-color;
+        letter-spacing: 1px;
+      }
+
+      p {
+        padding: 20px;
+      }
+
+      .logo-in-text {
+        font-family: $logo-font;
+        color: $homepage-intext-logo-color;
+        text-decoration: underline;
+        transition: all 500ms;
+
+        &:hover {
+          cursor: pointer;
+          color: $homepage-intext-logo-color-hover;
+        }
+      }
+
+      .secondary {
+        color: $homepage-secondary-intext-logo-color;
+
+        &:hover {
+          color: $homepage-secondary-intext-logo-color-hover;
+        }
+      }
+    }
+
+    div::before, div::after {
+      content: '';
+      width: 1em;
+      height: 1em;
+      background: $homepage-primary-background-color;
+      position: absolute;
+      bottom: -0.8rem;
+      z-index: 1000;
+    }
+
+    div::before {
+      right: 49.99%;
+      transform: skew(0, 25deg);
+    }
+
+    div::after {
+      left: 49.99%;
+      transform: skew(0, -25deg);
+    }
+
+    div:nth-child(even) {
+      color: $color-fair;
+      background: $homepage-secondary-background-color;
+      margin: 0;
+
+      h2 {
+        color: $homepage-header-font-secondary-color;
+      }
+
+      &::before, &::after {
+        background: $homepage-secondary-background-color;
+        bottom: -0.25em;
+      }
+    }
+
+    // "What we are proud of" list styles
+    .home--summary {
+      ul {
+        list-style-type: none;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 1em;
+
+        li {
+          position: relative;
+          display: block;
+          margin: 0.5em;
+          min-width: 250px;
+          padding: 1em;
+          flex: 1;
+          @include border($color-primary, $color-fair);
+        }
+      }
+    }
+  }
+}

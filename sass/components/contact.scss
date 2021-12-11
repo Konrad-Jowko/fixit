@@ -1,0 +1,134 @@
+@import "./../settings.scss";
+@import "./../animatedElementsMixins.scss";
+
+/* Styles for Contact element */
+.contact {
+  max-width: 100vw;
+  min-width: 95vw;
+
+  .container {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    width: 100%;
+
+    div {
+      margin: 1rem;
+      padding: 2rem;
+      max-width: 90vw;
+      justify-content: center;
+
+      .contact--title {
+        text-align: center;
+        font-size: clamp(1rem, calc(1.5rem + 1vw), 2rem);
+        color: $contact-header-font-color;
+        letter-spacing: 1px;
+      }
+
+      .contact--description {
+        margin: 1em auto;
+        color: $contact-main-font-color;
+        font-size: clamp(0.8rem, calc(0.8rem + 1vw), 1.5rem);
+        text-align: center;
+        max-width: 700px;
+        z-index: 1;
+      }
+    }
+
+    // Single segment styles
+    .contact--info {
+      margin: 2rem;
+      flex: 1;
+      @include border-decoration ($contact-section-border-color, left, right);
+
+      .contact--details {
+        list-style-type: none;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+
+
+        // Contact information list style
+        li {
+          position: relative;
+          padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+          text-align: center;
+          color: $contact-main-font-color;
+          overflow: hidden;
+
+          h3 {
+            font-size: clamp(0.8rem, calc(1.2rem + 1vw), 1.6rem);
+            color: $contact-header-font-color;
+            margin: 0;
+          }
+
+          p {
+            margin: 5px;
+            padding: 0.5em;
+
+            i {
+              color: $contact-icon-color-primary;
+            }
+          }
+
+          &:nth-child(odd) {
+            p { border-left: 3px solid $contact-decoration-primary-color; }
+
+            &::before {
+              position: absolute;
+              top: 2em;
+              right: 0;
+              width: 10%;
+              height: 100%;
+              content: '';
+              background: $contact-decoration-primary-color;
+              z-index: -1;
+              transform: skew(-50deg, 0);
+            }
+          }
+
+          &:nth-child(even) {
+            p {
+              border-right: 3px solid $contact-decoration-secondary-color;
+
+              i {
+                color: $contact-icon-color-secondary;
+              }
+            }
+
+            &::before {
+              position: absolute;
+              top: 2em;
+              left: 0;
+              width: 10%;
+              height: 100%;
+              content: '';
+              background: $contact-decoration-secondary-color;
+              z-index: -1;
+              transform: skew(50deg, 0);
+            }
+          }
+        }
+      }
+
+      // Google maps container styles
+      .map-responsive{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+      }
+      .map-responsive iframe{
+          border: none;
+          left:0;
+          top:0;
+          height:100%;
+          width:100%;
+          position:absolute;
+      }
+    }
+  }
+}

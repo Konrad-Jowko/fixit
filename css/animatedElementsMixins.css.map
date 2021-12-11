@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "animatedElementsMixins.css",
+	"sources": [
+		"../sass/animatedElementsMixins.scss",
+		"../sass/settings.scss"
+	],
+	"names": [],
+	"mappings": "ACAA,qBAAqB;AAOrB,WAAW;AAIX,yBAAyB;ADTzB,2BAA2B;AAsB3B,2BAA2B;AA+C3B,+BAA+B"
+}

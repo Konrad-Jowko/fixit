@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your friendly neighbour Car Mechanic!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Glory:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="body-container">
+      <header>
+        <div class="logo"><label for="home"> Fixit!</label></div>
+        <div class="header-quote">We are <u>FIXED</u> on our work!</div>
+        <nav>
+          <ul>
+              <li><label class="button" for="home">Home</label></li>
+              <li><label class="button" for="services">Services</label></li>
+              <li><label class="button" for="contact">Contact</label></li>
+          </ul>
+        </nav>
+      </header>
+
+      <input type="radio" id="home" name="sub-page" value="home" checked hidden>
+      <input type="radio" id="services" name="sub-page" value="services" hidden>
+      <input type="radio" id="contact" name="sub-page" value="contact" hidden>
+
+      <section class="home">
+        <div class="container">
+
+          <!-- Homepage contents-->
+          <div class="home--welcome-container">
+            <h1> Welcome!</h1>
+
+            <p> Have You found Yourself in desperate need for some repair? Maybe Your sink just started leaking? You've dropped Your fancy
+              smartphone to the toilet? Or maybe Your in-laws are coming for a suprise visit, and they would give You hell for that squeaking floorboards, You were
+              supposed to take care of last Christmas?
+            </p>
+
+            <h2> Don't worry! <br> We will take care of it!</h2>
+
+            <p> Here at
+              <span class="logo-in-text">Fixit!</span>
+              , we agregate repair specialist from the entire range of Your needs! <br>
+              From woodworkers, plumbers and gas workers towards electricians, electronics specialists and even car mechanics,
+               both standard and electric!
+            </p>
+          </div>
+
+          <div class="home--how-to">
+            <h2> How to get help? </h2>
+            <p> It is extremely easy! All You have to do is follow to our <label for="services"><span class="text-attention">services page</span></label>, pick the service You are interested in
+              and click on a link, that will lead You to a phone number You should call on.
+            </p>
+            <p>
+              All lines are active <span class="text-attention">24/7</span> and our friends at customer service will make sure, that You will get the help needed
+              as soon as it is possible!
+            </p>
+          </div>
+
+          <div class="home--summary">
+            <h2> What we are proud of? </h2>
+            <ul>
+              <li> Our platform cooperates with over <span class="text-attention">1000</span> specialists!</li>
+              <li> Average response time to emergency is <span class="text-attention">under two hours</span>! </li>
+              <li> We cover the entire area of New York, including the suburbs!</li>
+              <li> We agregate experts from <span class="text-attention">eight</span> different specializations!</li>
+              <li> Through 8 years of existence, we successfully completed over <span class="text-attention">10000</span> repairs!</li>
+
+            </ul>
+          </div>
+
+          <div class="home--cooperation">
+            <h2> Interested in cooperation? </h2>
+            <p> Are You a repair specialist, who needs work? Or maybe You are just a hobbist, who would like to make money on some tasks,
+              that will hone Your skills? Then we have an offer just for <span class="text-attention">You</span>!
+            </p>
+            <p>
+              No difference if You look for full-time job and exclusive cooperation, a part time gig or You just want to try this kind of
+              work a couple times in a month, we can help You with that!
+            </p>
+            <p>
+              Just pick a
+              <label for="contact"><span class="text-attention">contact number </span></label>
+              to one of our Cooperation Specialists, who will help You start Your great journey with
+              <span class="logo-in-text secondary">Fixit!</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services subpage contents-->
+      <section class="services">
+        <div class="title"> <h1>Our Services!</h1> </div>
+        <div class="container">
+          <div class="services--option bg--1">
+            <input type="radio" class="service-reveal" id="plumbing" name="service" value="plumbing" hidden>
+            <div class="services-description">
+              <h2>
+                Plumbing
+              </h2>
+              <ul>
+                <li> Over 150 specialists ready to help You </li>
+                <li> Average response time: 1,5h </li>
+                <li> Services ranging from quick faucet repair to fitting new equipment and pipes </li>
+                <li> Prices starting at 30$</li>
+              </ul>
+              <span class="contact-button"><label for="contact">Fix It Now!</label></span>
+              <label for="plumbing" class="button">Details</label>
+            </div>
+
+          </div>
+
+          <div class="services--option bg--2">
+            <input type="radio" class="service-reveal" id="gas" name="service" value="gas" hidden>
+            <div class="services-description">
+              <h2>
+                Gas Works
+              </h2>
+              <ul>
+                <li> Over 160 specialists ready to help You </li>
+                <li> Average response time: 3h </li>
+                <li> Gas pipes repairs, mounting new stoves and ovens, legitimizing gas systems </li>
+                <li> Prices starting at 120$</li>
+              </ul>
+              <span class="contact-button"><label for="contact">Fix It Now!</label></span>
+              <label for="gas" class="button">Details</label>
+            </div>
+          </div>
+
+          <div class="services--option bg--3" >
+            <input type="radio" class="service-reveal" id="standard-cars" name="service" value="standard-cars" hidden>
+            <div class="services-description">
+              <h2>
+                Standard Cars
+              </h2>
+              <ul>
+                <li> Over 200 specialists ready to help You </li>
+                <li> Average response time: 2h </li>
+                <li> car inspection, replacement of tires and fluids, dyno, and more </li>
+                <li> Prices starting at 200$</li>
+              </ul>
+              <span class="contact-button"><label for="contact">Fix It Now!</label></span>
+              <label for="standard-cars" class="button">Details</label>
+            </div>
+          </div>
+
+          <div class="services--option bg--4">
+            <input type="radio" class="service-reveal" id="electric-cars" name="service" value="electric-cars" hidden>
+            <div class="services-description">
+              <h2>
+                Electric Cars
+              </h2>
+              <ul>
+                <li> 20 specialists ready to help You </li>
+                <li> Average response time: 6-8h </li>
+                <li> service of electric motors, battery inspection, factory settings  </li>
+                <li> Prices starting at 250$</li>
+              </ul>
+              <span class="contact-button"><label for="contact">Fix It Now!</label></span>
+              <label for="electric-cars" class="button">Details</label>
+            </div>
+          </div>
+
+          <div class="services--option bg--5">
+            <input type="radio" class="service-reveal" id="electrics" name="service" value="electrics" hidden>
+            <div class="services-description">
+              <h2>
+                Electrics
+              </h2>
+              <ul>
+                <li> Over 180 specialists ready to help You </li>
+                <li> Average response time: 2.5h </li>
+                <li> Repair of electrical devices, replacement of cables, installation of appliances  </li>
+                <li> Prices starting at 30$</li>
+              </ul>
+              <span class="contact-button"><label for="contact">Fix It Now!</label></span>
+              <label for="electrics" class="button">Details</label>
+            </div>
+          </div>
+
+          <div class="services--option bg--6">
+            <input type="radio" class="service-reveal" id="electronics" name="service" value="electronics" hidden>
+            <div class="services-description">
+              <h2>
+                Electronics
+              </h2>
+              <ul>
+                <li> Over 140 specialists ready to help You </li>
+                <li> Average response time: 1.5h </li>
+                <li> Servicing smartphones, iphones, laptops, macs, computers and all other electronics</li>
+                <li> Prices starting at 100$</li>
+              </ul>
+              <span class="contact-button"><label for="contact">Fix It Now!</label></span>
+              <label for="electronics" class="button">Details</label>
+            </div>
+          </div>
+
+          <div class="services--option bg--7">
+            <input type="radio" class="service-reveal" id="woodwork" name="service" value="woodwork" hidden>
+            <div class="services-description">
+              <h2>
+                Woodwork
+              </h2>
+              <ul>
+                <li> Over 70 specialists ready to help You </li>
+                <li> Average response time: 4h </li>
+                <li> Sanding floors, repairing wooden furniture, impregnation, carpentry </li>
+                <li> Prices starting at 80$</li>
+              </ul>
+              <span class="contact-button"><label for="contact">Fix It Now!</label></span>
+              <label for="woodwork" class="button">Details</label>
+            </div>
+          </div>
+
+          <div class="services--option bg--8">
+            <input type="radio" class="service-reveal" id="tiling" name="service" value="tiling" hidden>
+            <div class="services-description">
+              <h2>
+                Tiling
+              </h2>
+              <ul>
+                <li> Over 110 specialists ready to help You </li>
+                <li> Average response time: 6h </li>
+                <li> Replacing tiles and tiling, terrazzo, terracotta, we handle all surfaces </li>
+                <li> Prices starting at 80$</li>
+              </ul>
+              <span class="contact-button"><label for="contact">Fix It Now!</label></span>
+              <label for="tiling" class="button">Details</label>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Contacts subpage contents-->
+      <section class="contact">
+        <div class="container">
+          <div class="contact--info">
+            <h2 class="contact--title">Service Information</h2>
+            <p class="contact--description">
+              Please choose a person and a manner of contact from a list below and we will help You in no time!
+            </p>
+            <ul class="contact--details">
+              <li>
+                <h3> Plumbing</h3>
+                <p> <i class="icon-user"></i> Jake Wilson <i class="icon-mobile"></i> 00-00 123 123 123 <i class="icon-wristwatch"></i> 07:00 - 18:00</p>
+                <p> <i class="icon-user"></i> Amber Howard <i class="icon-mobile"></i> 00-00 435 435 435 <i class="icon-wristwatch"></i> 18:00 - 07:00 </p>
+                <p> <i class="icon-mail-alt"></i> plumbing@fixit.com </p>
+              </li>
+              <li>
+                <h3> Gas Works</h3>
+                <p> <i class="icon-user"></i> Thomas Hudson <i class="icon-mobile"></i> 00-00 123 123 123 <i class="icon-wristwatch"></i> 07:00 - 18:00</p>
+                <p> <i class="icon-user"></i> Albert Hills <i class="icon-mobile"></i> 00-00 435 435 435 <i class="icon-wristwatch"></i> 18:00 - 07:00 </p>
+                <p> <i class="icon-mail-alt"></i> gasworks@fixit.com </p>
+              </li>
+              <li>
+                <h3> Standard Cars &amp; Electric Cars</h3>
+                <p> <i class="icon-user"></i> Phill Simons <i class="icon-mobile"></i> 00-00 123 123 123 <i class="icon-wristwatch"></i> 07:00 - 18:00</p>
+                <p> <i class="icon-user"></i> John Sterling <i class="icon-mobile"></i> 00-00 435 435 435 <i class="icon-wristwatch"></i> 18:00 - 07:00 </p>
+                <p> <i class="icon-mail-alt"></i> cars@fixit.com </p>
+              </li>
+              <li>
+                <h3> Electrics</h3>
+                <p> <i class="icon-user"></i> Hannah May <i class="icon-mobile"></i> 00-00 123 123 123 <i class="icon-wristwatch"></i> 07:00 - 18:00</p>
+                <p> <i class="icon-user"></i> Lily Cass <i class="icon-mobile"></i> 00-00 435 435 435 <i class="icon-wristwatch"></i> 18:00 - 07:00 </p>
+                <p> <i class="icon-mail-alt"></i> electrics@fixit.com </p>
+              </li>
+              <li>
+                <h3> Electronics</h3>
+                <p> <i class="icon-user"></i> Bill Wright <i class="icon-mobile"></i> 00-00 123 123 123 <i class="icon-wristwatch"></i> 07:00 - 18:00</p>
+                <p> <i class="icon-user"></i> Stanley Richi <i class="icon-mobile"></i> 00-00 435 435 435 <i class="icon-wristwatch"></i> 18:00 - 07:00 </p>
+                <p> <i class="icon-mail-alt"></i> electronics@fixit.com </p>
+              </li>
+              <li>
+                <h3> Woodwork &amp; Tiling</h3>
+                <p> <i class="icon-user"></i> Roger Tasker <i class="icon-mobile"></i> 00-00 123 123 123 <i class="icon-wristwatch"></i> 07:00 - 18:00</p>
+                <p> <i class="icon-user"></i> Sue Willing <i class="icon-mobile"></i> 00-00 435 435 435 <i class="icon-wristwatch"></i> 18:00 - 07:00 </p>
+                <p> <i class="icon-mail-alt"></i> flooring@fixit.com </p>
+              </li>
+            </ul>
+          </div>
+          <div class="contact--info" >
+            <h2 class="contact--title">Adress &amp; Contact Information</h2>
+            <ul class="contact--details">
+              <li>
+               <p> <i class="icon-user"></i> Holly Mathews <i class="icon-mobile"></i> 00-00 546 456 456 <i class="icon-wristwatch"></i> 07:00 - 18:00 </p>
+               <p> <i class="icon-mail-alt"></i> contact@fixit.com </p>
+               <p> <i class="icon-home"></i> 112 Villager's Square, Entrance B, Floor 3rd. <br>
+                                             122456 New York </p>
+              </li>
+            </ul>
+            <div class="map-responsive">
+              <iframe title="Google Map Location" src="https://www.google.com/maps/embed?pb=!1m19!1m12!1m3!1d19579.218168980547!2d21.0097352!3d52.163379199999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m4!3e0!4m0!4m1!2s2880%20Broadway%2C%20New%20York!5e0!3m2!1spl!2spl!4v1635278352786!5m2!1spl!2spl" width="800" height="600" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

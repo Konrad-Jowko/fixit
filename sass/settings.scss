@@ -1,0 +1,53 @@
+/* Color Variables */
+$color-primary: #ff793f;
+$color-secondary: #ff5252;
+$color-fair: #f7f1e3;
+$color-gray: #aaa69d;
+
+
+/* Fonts */
+$logo-font: 'Anton', sans-serif;
+$primary-font: 'Glory', sans-serif;
+
+/* Components settings */
+
+// Header
+$header-background-primary: $color-primary;
+$header-background-secondary: $color-secondary;
+$header-font: $primary-font;
+$header-font-color: $color-fair;
+$header-button-background-color-primary: $color-fair;
+$header-button-background-color-secondary: $color-secondary;
+
+// Homepage
+$homepage-primary-background-color: $color-fair;
+$homepage-secondary-background-color: $color-primary;
+$homepage-primary-font-color: $color-gray;
+$homepage-header-font-color: $color-primary;
+$homepage-header-font-secondary-color: $color-fair;
+$homepage-intext-logo-color: $color-primary;
+$homepage-intext-logo-color-hover: $color-secondary;
+$homepage-secondary-intext-logo-color: $color-secondary;
+$homepage-secondary-intext-logo-color-hover: $color-fair;
+$homepage-list-border-color-primary: $color-primary;
+$homepage-list-border-color-secondary: $color-fair;
+
+// Services
+$services-header-color: $color-primary;
+$services-option-border-color: $color-primary;
+$services-option-header-color: $color-fair;
+$services-option-header-background-color: $color-secondary;
+$services-button-font-color: $color-fair;
+$single-service-detail-background-color: $color-primary;
+$single-service-detail-font-color: $color-fair;
+$expanding-button-background-color: $color-primary;
+$contact-button-background-color: $color-secondary;
+
+// Contact
+$contact-header-font-color: $color-primary;
+$contact-main-font-color: $color-gray;
+$contact-section-border-color: $color-primary;
+$contact-icon-color-primary: $color-secondary;
+$contact-icon-color-secondary: $color-primary;
+$contact-decoration-primary-color: $color-primary;
+$contact-decoration-secondary-color: $color-secondary;

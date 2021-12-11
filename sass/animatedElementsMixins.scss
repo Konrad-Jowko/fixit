@@ -1,0 +1,96 @@
+@import "./settings.scss";
+
+/* Animated Button Mixin */
+@mixin button ($bg-color, $font-color) {
+  color: #{$bg-color};
+  font-size: clamp(.01rem, calc(0.7rem + 1vw), 4rem);
+  padding: 0.3em;
+  margin: 0.3em;
+  text-align: center;
+  min-width: 6em;
+  border: 2px solid #{$bg-color};
+  border-radius: 0.5em;
+  background: linear-gradient(45deg, #{$bg-color} 50%, transparent 50%);
+  background-size: 300%;
+  background-position: 100% 0;
+  transition: all 1.5s;
+
+  &:hover {
+    color: #{$font-color};
+    background-position: 0 100%;
+    background-size: 600%;
+  }
+}
+
+/* Animated Border Mixin */
+@mixin border ($border-color, $blend-color) {
+  border: 2px solid #{$border-color};
+  transition: all 500ms ease-in;
+  z-index: 1;
+
+
+  &::before, &::after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: calc(90%);
+    height: calc(90%);
+    background: #{$blend-color};
+    transition: transform 1s ease-in;
+  }
+
+  &::before {
+    top: -3%;
+    left: -3%;
+    transform: scale(1);
+    transform-origin: top left;
+
+  }
+
+  &::after {
+    bottom: -3%;
+    right: -3%;
+    transform: scale(1);
+    transform-origin: bottom right;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: #{$border-color};
+
+    &::before {
+      transform: scale(0.2);
+    }
+
+    &::after {
+      transform: scale(0.2);
+    }
+
+  }
+}
+
+/* Not Animated Border Mixin */
+@mixin border-decoration ($border-color, $top, $bottom) {
+  position: relative;
+  border: 3px solid #{$border-color};
+  z-index: 0;
+
+  &::after, &::before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    background: $color-fair;
+    z-index: -1;
+  }
+
+  &::after {
+    top: 0 - 3px;
+    #{$top}: 0 - 3px;
+  }
+
+  &::before {
+    bottom: 0 - 3px;
+    #{$bottom}: 0 - 3px;
+  }
+}

@@ -1,0 +1,55 @@
+/* Color Variables */
+/* Fonts */
+/* Components settings */
+/* Color Variables */
+/* Fonts */
+/* Components settings */
+/* Animated Button Mixin */
+/* Animated Border Mixin */
+/* Not Animated Border Mixin */
+/* Styles for Homepage */
+.home .container { margin: 0; width: 100%; }
+
+.home .container div { position: relative; margin-block: 0.5rem; padding: clamp(0.3rem, calc(0.1em + 2vw), 5rem) 0.5rem; flex: 1; text-align: center; color: #aaa69d; font-size: clamp(0.5rem, calc(0.8rem + 1vw), 4rem); }
+
+.home .container div h1 { font-size: clamp(1rem, calc(2.5rem + 1vw), 8rem); color: #ff793f; letter-spacing: 1px; }
+
+.home .container div h2 { font-size: clamp(1rem, calc(1.5rem + 1vw), 4rem); color: #ff793f; letter-spacing: 1px; }
+
+.home .container div p { padding: 20px; }
+
+.home .container div .logo-in-text { font-family: "Anton", sans-serif; color: #ff793f; text-decoration: underline; transition: all 500ms; }
+
+.home .container div .logo-in-text:hover { cursor: pointer; color: #ff5252; }
+
+.home .container div .secondary { color: #ff5252; }
+
+.home .container div .secondary:hover { color: #f7f1e3; }
+
+.home .container div::before, .home .container div::after { content: ''; width: 1em; height: 1em; background: #f7f1e3; position: absolute; bottom: -0.8rem; z-index: 1000; }
+
+.home .container div::before { right: 49.99%; transform: skew(0, 25deg); }
+
+.home .container div::after { left: 49.99%; transform: skew(0, -25deg); }
+
+.home .container div:nth-child(even) { color: #f7f1e3; background: #ff793f; margin: 0; }
+
+.home .container div:nth-child(even) h2 { color: #f7f1e3; }
+
+.home .container div:nth-child(even)::before, .home .container div:nth-child(even)::after { background: #ff793f; bottom: -0.25em; }
+
+.home .container .home--summary ul { list-style-type: none; display: flex; flex-flow: row wrap; padding: 1em; }
+
+.home .container .home--summary ul li { position: relative; display: block; margin: 0.5em; min-width: 250px; padding: 1em; flex: 1; border: 2px solid #ff793f; transition: all 500ms ease-in; z-index: 1; }
+
+.home .container .home--summary ul li::before, .home .container .home--summary ul li::after { z-index: -1; content: ''; position: absolute; width: calc(90%); height: calc(90%); background: #f7f1e3; transition: transform 1s ease-in; }
+
+.home .container .home--summary ul li::before { top: -3%; left: -3%; transform: scale(1); transform-origin: top left; }
+
+.home .container .home--summary ul li::after { bottom: -3%; right: -3%; transform: scale(1); transform-origin: bottom right; }
+
+.home .container .home--summary ul li:hover { cursor: pointer; color: #ff793f; }
+
+.home .container .home--summary ul li:hover::before { transform: scale(0.2); }
+
+.home .container .home--summary ul li:hover::after { transform: scale(0.2); }
